@@ -1,131 +1,100 @@
-/* Fonts & Reset */
-body {
+
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
   color: #333;
 }
 
-/* Navbar */
-.navbar {
+header {
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000;
+  justify-content: space-between;
 }
 
 .logo {
-  width: 130px;
-  height: auto;
+  height: 50px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff5252;
+  color: #00d1b2;
 }
 
-/* Hero Section */
 .hero {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(135deg, #1c1c1c, #272727);
+  color: white;
+  padding: 5rem 0;
   text-align: center;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  color: #fff;
-  padding: 2rem;
+  animation: fadeIn 1.5s ease;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .btn {
-  display: inline-block;
-  background-color: #ff5252;
+  background: #00d1b2;
   color: white;
   padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #e03e3e;
-}
-
-/* Footer */
-.footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}end;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav a.active,
-nav a:hover {
-  color: #007bff;
-}
-
-.hero {
-  background: url('../assets/hero.jpg') center/cover no-repeat;
-  padding: 100px 0;
-  text-align: center;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero .btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
   transition: background 0.3s ease;
 }
 
-.hero .btn:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background: #00b89c;
 }
 
+
 footer {
-  background: #222;
-  color: white;
-  padding: 20px;
   text-align: center;
-  margin-top: 60px;
+  padding: 1rem;
+  background: #111;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
