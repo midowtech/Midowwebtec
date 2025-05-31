@@ -1,0 +1,24 @@
+<!-- Services Section -->
+<section id="services" class="py-20 px-6 bg-gray-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-10">Our Services</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white shadow p-6 rounded-lg hover:shadow-xl transition">
+        <h4 class="text-xl font-semibold mb-2">🌐 Web Design</h4>
+        <p>Mobile-first custom websites with a premium feel and lightning speed.</p>
+      </div>
+      
+      <div class="bg-white shadow p-6 rounded-lg hover:shadow-xl transition">
+        <h4 class="text-xl font-semibold mb-2">📱 Mobile Apps</h4>
+        <p>Custom Android apps with pro UI, automation features & branding.</p>
+      </div>
+      
+      <div class="bg-white shadow p-6 rounded-lg hover:shadow-xl transition">
+        <h4 class="text-xl font-semibold mb-2">🤖 Smart Automation</h4>
+        <p>Bots and tools to automate your business, from betting to business.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
