@@ -3,164 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Midow WebTec – Premium Development Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Midow WebTec | Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-<!-- Portfolio Section -->
-<section id="portfolio" style="padding: 60px 20px; background: #f7f7f7;">
-  <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px;">🚀 Our Portfolio</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: auto;">
-    
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px;">
-      <img src="https://i.imgur.com/NobiiBotScreenshot.png" alt="Nobii Bot" style="width: 100%; border-radius: 8px;">
-      <h3 style="margin-top: 15px;">Nobii Stake HiLo Bot</h3>
-      <p>Auto predictor bot with demo lock, WhatsApp unlock, and resale-ready APK.</p>
-      <a href="https://nobibots.com/install" target="_blank" style="color: #0066cc; font-weight: bold;">🔗 View Project</a>
-    </div>
-
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px;">
-      <img src="https://i.imgur.com/MidowGame.png" alt="Midow Betss" style="width: 100%; border-radius: 8px;">
-      <h3 style="margin-top: 15px;">Midow Betss Website</h3>
-      <p>Fully functional casino with crypto support, 8+ original games, and admin dashboard.</p>
-      <a href="https://midowbetss.lovestoblog.com" target="_blank" style="color: #0066cc; font-weight: bold;">🔗 Visit Site</a>
-    </div>
-
-    <div style="width: 300px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px;">
-      <img src="https://i.imgur.com/StakeAllInOne.png" alt="All-in-One Stake Bot" style="width: 100%; border-radius: 8px;">
-      <h3 style="margin-top: 15px;">Stake All-in-One Bot</h3>
-      <p>Bundle of AI-based bots for all Stake games in one APK – includes QR lock, demo plays & more.</p>
-      <a href="https://nobibots.com/allbots" target="_blank" style="color: #0066cc; font-weight: bold;">🔗 Explore Bots</a>
-    </div>
-
-  </div>
-</section>
     body {
-      font-family: 'Outfit', sans-serif;
-      background: #0e0e1a;
-      color: #ffffff;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
-
     header {
-      height: 100vh;
-      background: radial-gradient(ellipse at top, #1c1c3c, #0e0e1a);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      background-color: #000;
+      padding: 25px;
       text-align: center;
-      padding: 0 20px;
+      color: white;
     }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: -200px;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
-      border-radius: 50%;
-      animation: pulse 8s ease-in-out infinite;
-      z-index: 0;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-    }
-
     header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3em;
-      z-index: 2;
-      color: #00ffe1;
-      text-shadow: 0 0 15px #00ffe1;
+      margin: 0;
+      font-size: 36px;
     }
-
-    header p {
-      font-size: 1.2em;
+    nav {
       margin-top: 10px;
-      z-index: 2;
     }
-
-    .section {
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #00ffe7;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
       padding: 80px 20px;
       text-align: center;
     }
-
-    .section h2 {
-      font-size: 2em;
-      color: #00ffe1;
-      margin-bottom: 30px;
+    .hero h2 {
+      font-size: 40px;
     }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .hero p {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
-      padding: 0 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(15px);
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.05);
-      transition: 0.4s ease;
+    .portfolio-item {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0,255,255,0.2);
+    .portfolio-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-
-    .card h3 {
-      color: #00ffe1;
-      margin-bottom: 10px;
+    .portfolio-item h3 {
+      margin: 15px;
+      font-size: 22px;
     }
-
-    .card p {
-      font-size: 0.95em;
-      line-height: 1.5em;
+    .portfolio-item p {
+      margin: 0 15px 15px;
+      font-size: 15px;
     }
-
-    .contact {
-      background: linear-gradient(to right, #151530, #0e0e1a);
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .contact h2 {
-      color: #00ffe1;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-
-    .contact p {
-      font-size: 1.1em;
-      margin: 10px 0;
-    }
-
-    .contact a {
-      color: #00ffe1;
+    .portfolio-item a {
+      display: block;
+      margin: 10px 15px 20px;
+      color: #007bff;
       text-decoration: none;
       font-weight: bold;
     }
-
+    .contact {
+      text-align: center;
+      background: #eee;
+    }
+    .contact a {
+      color: #007bff;
+      text-decoration: none;
+    }
     footer {
-      background: #0a0a15;
+      background: #000;
+      color: #aaa;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
-      color: #888;
     }
   </style>
 </head>
@@ -168,37 +104,52 @@
 
   <header>
     <h1>Midow WebTec</h1>
-    <p>Elite Solutions for Web, Bots & Business Apps</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2>Why Choose Us</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>High-Converting Sites</h3>
-        <p>We build sleek, fast-loading websites that turn clicks into customers and bring your brand to life.</p>
+  <section id="home" class="hero">
+    <h2>🚀 Smart Bots & Web Solutions</h2>
+    <p>We build intelligent Stake Bots, Casino Games, and Automation Systems.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2 style="text-align:center; font-size: 30px;">Our Projects</h2>
+    <div class="portfolio-container">
+
+      <div class="portfolio-item">
+        <img src="https://i.imgur.com/NobiiBotScreenshot.png" alt="Nobii Bot">
+        <h3>Nobii Stake Bot</h3>
+        <p>Auto predictor bot for Stake with demo lock & WhatsApp unlock system.</p>
+        <a href="https://nobibots.com/install" target="_blank">🔗 View Bot</a>
       </div>
-      <div class="card">
-        <h3>Custom Automation Bots</h3>
-        <p>Stake bots, AI tools, predictors – fully automated and branded solutions tailored for your niche.</p>
+
+      <div class="portfolio-item">
+        <img src="https://i.imgur.com/MidowGame.png" alt="Midow Betss">
+        <h3>Midow Betss Casino</h3>
+        <p>Crypto-powered casino with original games and secure admin dashboard.</p>
+        <a href="https://midowbetss.lovestoblog.com" target="_blank">🎲 Visit Casino</a>
       </div>
-      <div class="card">
-        <h3>Smart Mobile Apps</h3>
-        <p>We develop modern apps with subscriptions, login, prediction, and real-time systems, ready to scale.</p>
+
+      <div class="portfolio-item">
+        <img src="https://i.imgur.com/StakeAllInOne.png" alt="All Bots">
+        <h3>All-in-One Stake Bot</h3>
+        <p>Full bundle with AI predictions, QR code lock & resale-ready APK.</p>
+        <a href="https://nobibots.com/allbots" target="_blank">🤖 Explore All Bots</a>
       </div>
+
     </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/918793727113" target="_blank">+91 8793727113</a></p>
-    <p><strong>📧 Email:</strong> <a href="mailto:creater920930@gmail.com">creater920930@gmail.com</a></p>
-    <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/builtbynobii" target="_blank">@builtbynobii</a></p>
+  <section id="contact" class="contact">
+    <h2>📞 Contact Us</h2>
+    <p>WhatsApp: <a href="https://wa.me/918793727113" target="_blank">+91 8793727113</a></p>
+    <p>Email: <a href="mailto:abhishekmanojdeshmukh@gmail.com">abhishekmanojdeshmukh@gmail.com</a></p>
   </section>
 
   <footer>
-    © 2025 Midow WebTec. All rights reserved. Crafted by Nobii.
-  </footer>
-
-</body>
-</html>        
+    © 2025 Midow WebTec | Powered by Nobii 🚀
+  </    
