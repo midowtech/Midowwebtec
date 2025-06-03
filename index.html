@@ -1,174 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Midow Web Creater Portfolio</title>
-<style>
-  /* Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    background: #0f111a;
-    color: #00ff99;
-    font-family: 'Consolas', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-  }
-  header {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid #00ff99;
-    width: 24ch;
-    animation: typing 3s steps(24), blink 0.75s step-end infinite;
-  }
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 24ch; }
-  }
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
-  main {
-    max-width: 900px;
-    width: 100%;
-  }
-  section.project {
-    background: #141927;
-    padding: 20px 25px;
-    margin-bottom: 30px;
-    border-left: 5px solid #00ff99;
-    box-shadow: 0 0 15px #00ff9980;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  section.project.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  section.project h2 {
-    color: #00ff99;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  section.project p {
-    font-size: 1.1rem;
-    color: #aaffcc;
-  }
-  section.contact {
-    background: #141927;
-    border-radius: 8px;
-    padding: 25px 20px;
-    box-shadow: 0 0 15px #00ff9980;
-    text-align: center;
-    margin-top: 50px;
-  }
-  section.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #00ff99;
-  }
-  section.contact p {
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
-  section.contact a {
-    color: #00ff99;
-    text-decoration: none;
-    font-weight: 700;
-  }
-  section.contact a:hover {
-    text-decoration: underline;
-    color: #00cca6;
-  }
-
-  /* Responsive for mobile */
-  @media (max-width: 600px) {
-    body {
-      padding: 20px 15px;
-    }
-    header {
-      font-size: 2rem;
-      width: 16ch;
-      margin-bottom: 40px;
-    }
-    section.project {
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-left-width: 3px;
-      box-shadow: 0 0 10px #00ff9955;
-    }
-    section.project h2 {
-      font-size: 1.4rem;
-    }
-    section.project p {
-      font-size: 1rem;
-    }
-    section.contact {
-      padding: 20px 15px;
-      margin-top: 40px;
-    }
-    section.contact h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-    }
-    section.contact p {
-      font-size: 1rem;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midow Web Creater</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>Midow Web Creater</header>
-
-<main>
-  <section class="project">
-    <h2>Project 1 - Responsive Website</h2>
-    <p>Built a modern responsive website using HTML5, CSS3, and JavaScript with smooth animations and pixel-perfect UI.</p>
+  <section class="hero">
+    <h1 class="animate">👨‍💻 Welcome to Midow Web Creater</h1>
+    <p class="animate">I design & develop creative, secure, and professional websites.</p>
+    <a href="projects.html" class="btn">💼 View My Projects</a>
   </section>
 
-  <section class="project">
-    <h2>Project 2 - E-commerce Platform</h2>
-    <p>Developed a full-stack e-commerce platform with React frontend and Node.js backend, featuring secure payment gateway integration.</p>
+  <section class="hero">
+    <h2 class="animate">Why Choose Me?</h2>
+    <ul class="animate">
+      <li>🔥 Modern, hacker-themed portfolio</li>
+      <li>⚡ Fast, clean, and responsive design</li>
+      <li>💡 Custom features & client satisfaction</li>
+    </ul>
   </section>
 
-  <section class="project">
-    <h2>Project 3 - Portfolio Website</h2>
-    <p>Created a sleek portfolio website showcasing my skills, projects, and contact information with dark mode and animations.</p>
-  </section>
+  <footer>
+    <p>© 2025 Midow Web Creater. All rights reserved.</p>
+  </footer>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:creater920930@gmail.com">creater920930@gmail.com</a></p>
-    <p>Phone: <a href="tel:+918793727113">+91 87937 27113</a></p>
-    <p>WhatsApp: <a href="https://wa.me/918793727113" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
-  </section>
-</main>
-
-<script>
-  const projects = document.querySelectorAll('.project');
-  function reveal() {
-    const triggerBottom = window.innerHeight * 0.85;
-    projects.forEach(project => {
-      const top = project.getBoundingClientRect().top;
-      if (top < triggerBottom) {
-        project.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', reveal);
-  reveal(); // initial call
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
