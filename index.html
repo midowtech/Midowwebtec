@@ -5,51 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Midow Web Creater Portfolio</title>
 <style>
-  /* Basic Reset */
+  /* Reset */
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
   body {
     background: #0f111a;
     color: #00ff99;
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Consolas', monospace;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
   }
   header {
-    margin-top: 40px;
-    margin-bottom: 60px;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 4px;
+    margin-bottom: 60px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid #00ff99;
-    width: 24ch; /* control length for typing effect */
-    animation: typing 3.5s steps(24), blink 0.75s step-end infinite;
+    border-right: 4px solid #00ff99;
+    width: 24ch;
+    animation: typing 3s steps(24), blink 0.75s step-end infinite;
   }
-
   @keyframes typing {
-    from { width: 0 }
-    to { width: 24ch }
+    from { width: 0; }
+    to { width: 24ch; }
   }
   @keyframes blink {
-    50% { border-color: transparent }
+    50% { border-color: transparent; }
   }
-
   main {
     max-width: 900px;
     width: 100%;
   }
   section.project {
     background: #141927;
-    margin-bottom: 30px;
     padding: 20px 25px;
+    margin-bottom: 30px;
     border-left: 5px solid #00ff99;
-    box-shadow: 0 0 12px #00ff99aa;
+    box-shadow: 0 0 15px #00ff9980;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -60,7 +57,6 @@
   }
   section.project h2 {
     color: #00ff99;
-    font-weight: 600;
     font-size: 1.8rem;
     margin-bottom: 10px;
   }
@@ -68,12 +64,11 @@
     font-size: 1.1rem;
     color: #aaffcc;
   }
-  /* Contact */
   section.contact {
     background: #141927;
-    padding: 25px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 15px #00ff99aa;
+    padding: 25px 20px;
+    box-shadow: 0 0 15px #00ff9980;
     text-align: center;
     margin-top: 50px;
   }
@@ -90,58 +85,90 @@
     color: #00ff99;
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.3s ease;
   }
   section.contact a:hover {
-    color: #00cca6;
     text-decoration: underline;
+    color: #00cca6;
   }
-  /* Scroll animation trigger JS */
+
+  /* Responsive for mobile */
+  @media (max-width: 600px) {
+    body {
+      padding: 20px 15px;
+    }
+    header {
+      font-size: 2rem;
+      width: 16ch;
+      margin-bottom: 40px;
+    }
+    section.project {
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-left-width: 3px;
+      box-shadow: 0 0 10px #00ff9955;
+    }
+    section.project h2 {
+      font-size: 1.4rem;
+    }
+    section.project p {
+      font-size: 1rem;
+    }
+    section.contact {
+      padding: 20px 15px;
+      margin-top: 40px;
+    }
+    section.contact h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    section.contact p {
+      font-size: 1rem;
+    }
+  }
 </style>
 </head>
 <body>
-  <header>Midow Web Creater</header>
 
-  <main>
-    <section class="project">
-      <h2>Project 1 - Responsive Website</h2>
-      <p>Built a modern responsive website using HTML5, CSS3, and JavaScript with smooth animations and pixel-perfect UI.</p>
-    </section>
+<header>Midow Web Creater</header>
 
-    <section class="project">
-      <h2>Project 2 - E-commerce Platform</h2>
-      <p>Developed a full-stack e-commerce platform with React frontend and Node.js backend, featuring secure payment gateway integration.</p>
-    </section>
+<main>
+  <section class="project">
+    <h2>Project 1 - Responsive Website</h2>
+    <p>Built a modern responsive website using HTML5, CSS3, and JavaScript with smooth animations and pixel-perfect UI.</p>
+  </section>
 
-    <section class="project">
-      <h2>Project 3 - Portfolio Website</h2>
-      <p>Created a sleek portfolio website showcasing my skills, projects, and contact information with dark mode and animations.</p>
-    </section>
+  <section class="project">
+    <h2>Project 2 - E-commerce Platform</h2>
+    <p>Developed a full-stack e-commerce platform with React frontend and Node.js backend, featuring secure payment gateway integration.</p>
+  </section>
 
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:creater920930@gmail.com">creater920930@gmail.com</a></p>
-      <p>Phone: <a href="tel:+918793727113">+91 87937 27113</a></p>
-      <p>WhatsApp: <a href="https://wa.me/918793727113" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
-    </section>
-  </main>
+  <section class="project">
+    <h2>Project 3 - Portfolio Website</h2>
+    <p>Created a sleek portfolio website showcasing my skills, projects, and contact information with dark mode and animations.</p>
+  </section>
 
-  <script>
-    // Scroll fade in animation for projects
-    const projects = document.querySelectorAll('.project');
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:creater920930@gmail.com">creater920930@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918793727113">+91 87937 27113</a></p>
+    <p>WhatsApp: <a href="https://wa.me/918793727113" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
+  </section>
+</main>
 
-    function revealProjects() {
-      const triggerBottom = window.innerHeight * 0.85;
-      projects.forEach(project => {
-        const projectTop = project.getBoundingClientRect().top;
-        if (projectTop < triggerBottom) {
-          project.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', revealProjects);
-    // Trigger once on load
-    revealProjects();
-  </script>
+<script>
+  const projects = document.querySelectorAll('.project');
+  function reveal() {
+    const triggerBottom = window.innerHeight * 0.85;
+    projects.forEach(project => {
+      const top = project.getBoundingClientRect().top;
+      if (top < triggerBottom) {
+        project.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  reveal(); // initial call
+</script>
+
 </body>
 </html>
