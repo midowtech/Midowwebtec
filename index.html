@@ -2,154 +2,284 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Midow WebTec | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midow Web Creater - Abhishek Deshmukh</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
   <style>
+    /* RESET */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #000;
-      padding: 25px;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #00ffe7;
-    }
-    .hero {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 40px;
-    }
-    .hero p {
-      font-size: 18px;
-      margin-top: 15px;
-    }
-    section {
-      padding: 50px 20px;
-    }
-    .portfolio-container {
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .portfolio-item {
-      width: 300px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
+    a {
+      color: #58a6ff;
+      text-decoration: none;
     }
-    .portfolio-item img {
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
       width: 100%;
-      height: 180px;
-      object-fit: cover;
     }
-    .portfolio-item h3 {
-      margin: 15px;
-      font-size: 22px;
-    }
-    .portfolio-item p {
-      margin: 0 15px 15px;
-      font-size: 15px;
-    }
-    .portfolio-item a {
-      display: block;
-      margin: 10px 15px 20px;
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact {
+
+    /* HERO SECTION */
+    #home {
+      padding: 120px 20px;
       text-align: center;
-      background: #eee;
+      background: linear-gradient(135deg, #238636, #2ea043);
+      color: white;
+      border-radius: 8px;
+      margin: 40px auto;
+      max-width: 900px;
     }
-    .contact a {
-      color: #007bff;
-      text-decoration: none;
+    #home h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
-    footer {
-      background: #000;
-      color: #aaa;
+    #home h1 span {
+      color: #d2ffa7;
+    }
+    #home h2 {
+      font-weight: 500;
+      font-size: 1.7rem;
+      height: 40px; /* For typed.js space */
+      margin-bottom: 20px;
+    }
+    #home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #e1e4e8;
+    }
+
+    /* SECTION HEADINGS */
+    h2.section-title {
       text-align: center;
+      font-size: 2rem;
+      margin: 60px 0 30px;
+      color: #39d353;
+    }
+
+    /* PROJECTS SECTION */
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      padding-bottom: 40px;
+    }
+    .project-card {
+      background: #161b22;
+      border-radius: 8px;
       padding: 20px;
+      box-shadow: 0 4px 10px rgb(56 133 255 / 0.15);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgb(56 133 255 / 0.3);
+    }
+    .project-card h3 {
+      margin-bottom: 12px;
+      color: #58a6ff;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: #8b949e;
+    }
+    .project-card a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #238636;
+      background: #a7f3d0;
+      padding: 6px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+    .project-card a:hover {
+      background: #34d399;
+      color: white;
+    }
+
+    /* PRICING TABLE */
+    #pricing {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .pricing-card {
+      background: #161b22;
+      border-radius: 8px;
+      padding: 30px 20px;
+      width: 280px;
+      box-shadow: 0 4px 15px rgb(14 165 233 / 0.2);
+      text-align: center;
+      color: #c9d1d9;
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgb(14 165 233 / 0.4);
+    }
+    .pricing-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #39d353;
+    }
+    .pricing-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #8b949e;
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+      color: #c9d1d9;
+    }
+    .pricing-card ul li {
+      margin-bottom: 10px;
+    }
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #58a6ff;
+    }
+    .pricing-card button {
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+    .pricing-card button:hover {
+      background: #2ea043;
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+      max-width: 600px;
+      margin: 0 auto 60px;
+      background: #161b22;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgb(14 165 233 / 0.3);
+    }
+    #contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #39d353;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact label {
+      font-weight: 600;
+      color: #c9d1d9;
+    }
+    #contact input, #contact textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: #0d1117;
+      color: #c9d1d9;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    #contact button {
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover {
+      background: #2ea043;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background: #161b22;
+      color: #8b949e;
+      font-size: 0.9rem;
+      border-top: 1px solid #238636;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      #projects {
+        grid-template-columns: 1fr;
+      }
+      #pricing {
+        flex-direction: column;
+        gap: 30px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Midow WebTec</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="home" class="hero">
-    <h2>🚀 Smart Bots & Web Solutions</h2>
-    <p>We build intelligent Stake Bots, Casino Games, and Automation Systems.</p>
+  <!-- HERO -->
+  <section id="home" data-aos="fade-down">
+    <h1>Hi, I'm <span>Abhishek Deshmukh</span></h1>
+    <h2><span class="typing"></span></h2>
+    <p>Passionate developer building modern websites, bots & tools under Midow Web Creater brand.</p>
   </section>
 
-  <section id="portfolio">
-    <h2 style="text-align:center; font-size: 30px;">Our Projects</h2>
-    <div class="portfolio-container">
+  <main class="container">
 
-      <div class="portfolio-item">
-        <img src="https://i.imgur.com/NobiiBotScreenshot.png" alt="Nobii Bot">
-        <h3>Nobii Stake Bot</h3>
-        <p>Auto predictor bot for Stake with demo lock & WhatsApp unlock system.</p>
-        <a href="https://nobibots.com/install" target="_blank">🔗 View Bot</a>
+    <!-- PROJECTS -->
+    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+    <section id="projects">
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Stake Mines Bot</h3>
+        <p>A smart bot for Stake Mines game with auto strategies and loss tracking.</p>
+        <a href="#" target="_blank">View Code</a>
       </div>
-
-      <div class="portfolio-item">
-        <img src="https://i.imgur.com/MidowGame.png" alt="Midow Betss">
-        <h3>Midow Betss Casino</h3>
-        <p>Crypto-powered casino with original games and secure admin dashboard.</p>
-        <a href="https://midowbetss.lovestoblog.com" target="_blank">🎲 Visit Casino</a>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="https://i.imgur.com/StakeAllInOne.png" alt="All Bots">
-        <h3>All-in-One Stake Bot</h3>
-        <p>Full bundle with AI predictions, QR code lock & resale-ready APK.</p>
-        <a href="https://nobibots.com/allbots" target="_blank">🤖 Explore All Bots</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>📞 Contact Us</h2>
-    <p>WhatsApp: <a href="https://wa.me/918793727113" target="_blank">+91 8793727113</a></p>
-    <p>Email: <a href="mailto:abhishekmanojdeshmukh@gmail.com">abhishekmanojdeshmukh@gmail.com</a></p>
-  </section>
-
-  <footer>
-    © 2025 Midow WebTec | Powered by Nobii 🚀
-  </    
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Midow Betss Website</h3>
+        <p>Fully functional gambling site with crypto payments and user dashboard.</p>
+        <
