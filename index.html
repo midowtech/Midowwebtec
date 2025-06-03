@@ -101,4 +101,250 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     .service-icon {
-      font-size: 40px
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .portfolio {
+      margin-top: 50px;
+    }
+    .portfolio h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      color: #007bff;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-info {
+      padding: 20px;
+    }
+    .project-info h4 {
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+    .about {
+      background: white;
+      border-radius: 15px;
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+    }
+    .about-text {
+      flex: 1;
+      min-width: 260px;
+    }
+    .about-text h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .contact {
+      background: white;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 60px auto 40px;
+      padding: 30px 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #007bff;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact input, .contact textarea {
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    .contact input:focus, .contact textarea:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    .contact button {
+      background: #007bff;
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+    .contact button:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 20px 15px;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+    footer a {
+      color: #007bff;
+    }
+    @media (max-width: 600px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+  <script>
+    // Simple form handler (just alert)
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you for contacting us! We will get back to you soon.");
+      e.target.reset();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Midow Web Technologies</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Professional Web & App Development</h2>
+    <p>Building modern, responsive websites and apps tailored to your business needs.</p>
+    <button class="btn-primary" onclick="location.href='#contact'">Get In Touch</button>
+  </section>
+
+  <section id="services">
+    <h2 style="text-align:center; color:#007bff;">Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>Responsive, SEO-friendly websites using modern technologies like React, Vue, and WordPress.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>App Development</h3>
+        <p>Cross-platform mobile apps for Android and iOS with great user experience and performance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Maintenance & Support</h3>
+        <p>Reliable ongoing website and app maintenance, updates, and technical support services.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>SEO & Marketing</h3>
+        <p>Improve your website’s search engine ranking and attract more customers through digital marketing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x180.png?text=Project+1" alt="Project 1" class="project-image" />
+        <div class="project-info">
+          <h4>Business Website</h4>
+          <p>Custom business website with CMS integration and responsive design.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x180.png?text=Project+2" alt="Project 2" class="project-image" />
+        <div class="project-info">
+          <h4>E-commerce App</h4>
+          <p>Mobile app for online shopping with secure payment gateway.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x180.png?text=Project+3" alt="Project 3" class="project-image" />
+        <div class="project-info">
+          <h4>Portfolio Website</h4>
+          <p>Personal portfolio with creative UI and smooth animations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <img src="https://via.placeholder.com/180.png?text=Your+Photo" alt="About Me" />
+    <div class="about-text">
+      <h2>About Midow Tech</h2>
+      <p>Midow Web Technologies is a professional web development company committed to delivering high-quality, modern, and user-friendly digital solutions. We help businesses grow by crafting websites and applications tailored to their needs.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Midow Web Technologies. All rights reserved. | <a href="https://midowtech.github.io/Midowwebtec/" target="_blank">Visit Our GitHub</a>
+  </footer>
+</body>
+</html>
