@@ -1,128 +1,68 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #fff;
-  color: #111;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
   line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  padding: 15px 20px;
-}
-
-.logo img {
-  height: 40px;
-  vertical-align: middle;
-}
-
-.logo span {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-left: 10px;
-  vertical-align: middle;
+/* Navbar */
+header {
+  background: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid #00ff99;
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
-  display: flex;
-  gap: 20px;
 }
 
-nav a {
-  color: #fff;
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #00ff99;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
+  padding: 5px 10px;
 }
 
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+  border-bottom: 2px solid #00ff99;
+}
+
+/* Hero Section */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 40px 20px;
-  background: #222;
-  color: white;
-}
-
-.hero .left h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.hero .right {
-  max-width: 300px;
-}
-
-.hero .btn {
-  display: inline-block;
-  background: #00c4b4;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.info {
-  padding: 40px 20px;
-  text-align: left;
-}
-
-.info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.info a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 10px;
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer {
-  background: #000;
-  color: #fff;
-  padding: 20px;
   text-align: center;
-  font-size: 0.9rem;
+  padding: 80px 20px;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00ff99;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease-out;
 }
+
+.hero h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  color: #00e6e6;
+}
+
+.hero p {
+  font-size: 1.2rem;
