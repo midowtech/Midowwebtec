@@ -2,53 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Midow Web Creater</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>💻 Midow Web Creater</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="intro">
-      <h2>👨‍💻 Welcome to Midow Web Creater</h2>
-      <p>I design & develop creative, secure, and professional websites.</p>
-      <p><a class="button" href="#">📂 View My Projects</a></p>
-    </section>
-
-    <section class="why-choose">
-      <h2>Why Choose Me?</h2>
-      <ul>
-        <li>🔥 Modern, hacker-themed portfolio</li>
-        <li>⚡ Fast, clean, and responsive design</li>
-        <li>💡 Custom features & client satisfaction</li>
-      </ul>
-    </section>
-
-    <section class="projects">
-      <h2>Featured Projects</h2>
-      <p>Coming Soon… Stay Tuned!</p>
-    </section>
-
-    <section class="offer">
-      <h2>What I Offer</h2>
-      <p>Custom web design, bots, tools, and secure services!</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Midow Web Creater. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midow Web Technologies</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 120px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+    .btn-primary {
+      background: #fff;
+      color: #007bff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #0056b3;
+      color: #fff;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .service-icon {
+      font-size: 40px
